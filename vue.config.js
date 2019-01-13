@@ -1,7 +1,8 @@
 module.exports = {
   outputDir: 'docs',
   runtimeCompiler: undefined,
-  baseUrl: './',
+  // baseUrl: '/',
+  publicPath : '/vue-blog/',
   assetsDir: 'static',
   productionSourceMap: undefined,
   parallel: undefined,
