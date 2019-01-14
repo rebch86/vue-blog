@@ -4,9 +4,8 @@
       <v-toolbar dark color="#3a3e44">
         <v-toolbar-side-icon>
         </v-toolbar-side-icon>
-        <v-toolbar-title class="white--text">Title</v-toolbar-title>
+        <v-toolbar-title class="white--text">{{ msg }}</v-toolbar-title>
       </v-toolbar>
-
       <div id="nav">
         <router-link to="/">Home</router-link>
         |
@@ -24,6 +23,19 @@
     </v-app>
   </div>
 </template>
+
+<script>
+export default {
+  mounted () {
+    console.log('zzz')
+  },
+  data () {
+    return {
+      msg: '야임마!'
+    }
+  }
+}
+</script>
 
 <style>
   #app {
