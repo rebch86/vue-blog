@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lint fix": "vue-cli-service lint --fix"
   },
   "dependencies": {
     "material-design-icons-iconfont": "^4.0.4",
@@ -33,7 +34,11 @@
       "plugin:vue/essential",
       "@vue/standard"
     ],
-    "rules": {},
+    "rules": {
+      "indent": "off",
+      "space-before-function-paren": ["error", "never"],
+      "object-curly-spacing": ["error", "never"]
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }

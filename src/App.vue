@@ -1,10 +1,9 @@
 <template>
   <div id="app">
     <v-app>
-      <v-toolbar dark color="#3a3e44">
-        <v-toolbar-side-icon>
-        </v-toolbar-side-icon>
-        <v-toolbar-title class="white--text">{{ msg }}</v-toolbar-title>
+      <v-toolbar dark dense color="#3a3e44">
+        <v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>
+        <v-toolbar-title class="white--text">{{ title }}</v-toolbar-title>
       </v-toolbar>
       <div id="nav">
         <router-link to="/">Home</router-link>
@@ -20,21 +19,45 @@
         <v-spacer></v-spacer>
         <div>&copy; 2019.01 Created By rebch86.(Made of vue / vuetify)</div>
       </v-footer>
+
+      <v-navigation-drawer v-model="drawer" absolute dark temporary width="230" class="grey darken-4">
+        <v-list>
+          <v-list-tile v-for="item in items" :key="item.title" @click="clickMenu">
+            <v-list-tile-action>
+              <v-icon>{{ item.icon }}</v-icon>
+            </v-list-tile-action>
+
+            <v-list-tile-content>
+              <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+            </v-list-tile-content>
+          </v-list-tile>
+        </v-list>
+      </v-navigation-drawer>
+
     </v-app>
   </div>
 </template>
 
 <script>
-export default {
-  mounted () {
-    console.log('zzz')
-  },
-  data () {
-    return {
-      msg: '야임마!'
+  export default {
+    mounted() {
+    },
+    data() {
+      return {
+        title: "rebch86's Blog",
+        drawer: false,
+        items: [
+          {title: '처음으로', icon: 'dashboard'},
+          {title: 'About', icon: 'account_box'}
+        ]
+      }
+    },
+    methods: {
+      clickMenu() {
+        alert('준비중')
+      }
     }
   }
-}
 </script>
 
 <style>
