@@ -9,7 +9,7 @@
         <router-link to="/">Home</router-link>
       </div>
       <v-content>
-        <v-container fluid>
+        <v-container>
           <router-view/>
         </v-container>
       </v-content>

@@ -1,10 +1,9 @@
 <template>
 
-    <v-layout justify-center row wrap fill-height pa-10>
-      <v-flex xs12 sm10>
-
+    <v-layout row wrap fill-height>
+      <v-flex xs12 md10 offset-md1>
         <v-card>
-          <v-img src="../assets/profile.png" aspect-ratio="2.75"></v-img>
+          <v-img :src="require('@/assets/profile.jpg')" aspect-ratio="2.5" max-height="280px"></v-img>
 
           <v-card-title primary-title style="text-align: left">
             <div>
@@ -48,6 +47,7 @@
         </v-card>
 
       </v-flex>
+
     </v-layout>
 </template>
 
