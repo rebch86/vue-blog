@@ -1,7 +1,22 @@
 <template>
   <div id="app">
     <v-app>
-      <v-toolbar dark dense clipped-left color="#3a3e44">
+
+      <v-navigation-drawer v-model="drawer" fixed dark app clipped width="220" class="grey darken-4">
+        <v-list dense>
+          <v-list-tile v-for="item in items" :key="item.title" @click="clickMenu(item.path)">
+            <v-list-tile-action>
+              <v-icon>{{ item.icon }}</v-icon>
+            </v-list-tile-action>
+
+            <v-list-tile-content>
+              <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+            </v-list-tile-content>
+          </v-list-tile>
+        </v-list>
+      </v-navigation-drawer>
+
+      <v-toolbar dark dense app fixed clipped-left color="#3a3e44">
         <v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>
         <v-toolbar-title class="white--text">{{ title }}</v-toolbar-title>
       </v-toolbar>
@@ -17,20 +32,6 @@
         <v-spacer></v-spacer>
         <div>&copy; 2019.01 Created By rebch86.(Made of vue / vuetify)</div>
       </v-footer>
-
-      <v-navigation-drawer v-model="drawer" absolute dark temporary  width="220" class="grey darken-4">
-        <v-list>
-          <v-list-tile v-for="item in items" :key="item.title" @click="clickMenu(item.path)">
-            <v-list-tile-action>
-              <v-icon>{{ item.icon }}</v-icon>
-            </v-list-tile-action>
-
-            <v-list-tile-content>
-              <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
-        </v-list>
-      </v-navigation-drawer>
 
     </v-app>
   </div>
