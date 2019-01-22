@@ -2,7 +2,7 @@
   <div id="app">
     <v-app>
 
-      <v-navigation-drawer v-model="drawer" fixed dark app clipped width="220" class="grey darken-4">
+      <v-navigation-drawer v-model="drawer" fixed dark app clipped width="220" mobile-break-point="550" class="grey darken-4">
         <v-list dense>
           <v-list-tile v-for="item in items" :key="item.title" @click="clickMenu(item.path)">
             <v-list-tile-action>
