@@ -35,6 +35,11 @@ export default new Router({
       path: '/study/node',
       name: 'node-index',
       component: () => import('./views/study/node/NodeIndex.vue')
+    },
+    {
+      path: '/contents/vue-1',
+      name: 'content-vue-1',
+      component: () => import('./views/contents/vue/vue1.vue')
     }
   ]
 })

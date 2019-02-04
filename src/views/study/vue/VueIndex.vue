@@ -5,7 +5,7 @@
       <v-card>
         <v-list three-line>
           <template v-for="(item, index) in vueItems">
-            <v-list-tile :key="index" avatar ripple @click="viewContent">
+            <v-list-tile :key="index" avatar ripple @click="viewContent(item.path)">
               <v-list-tile-content>
                 <v-list-tile-title>{{ item.title }}</v-list-tile-title>
                 <v-list-tile-sub-title>{{ item.subtitle }}</v-list-tile-sub-title>
@@ -35,15 +35,16 @@
     data() {
       return {
         vueItems: [
-          {title: 'Vue 컨텐츠', subtitle: 'Vue v-model', createDate: '2019-01-24'},
-          {title: 'Vue 컨텐츠', subtitle: 'Vue v-model', createDate: '2019-01-24'}
+          {title: 'Vue 컨텐츠', subtitle: 'Vue v-model', createDate: '2019-01-24', path: '/contents/vue-1'}
         ]
       }
     },
 
     methods: {
-      viewContent() {
-        alert('준비중..')
+      viewContent(path) {
+        this.$router.push({
+          path: path
+        })
       }
     }
   }
