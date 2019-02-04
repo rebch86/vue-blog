@@ -12,8 +12,15 @@
         :blockquote="true"/>
     </v-flex>
     <v-flex xs10 offset-xs1 mt-5>
-      <p>그림 1</p>
-      <v-img :src="require('@/assets/vue/mvvm.png')" aspect-ratio="1.8" contain></v-img>
+      <div>
+        <p>그림 1 - MVVM 패턴</p>
+        <v-img :src="require('@/assets/vue/mvvm.png')" aspect-ratio="1.8" contain style="border: 1px solid #6b6f75"></v-img>
+      </div>
+      <v-divider class="mt-5 mb-5"/>
+      <div>
+        <p>그림 2 - Vue Component</p>
+        <v-img :src="require('@/assets/vue/vue-component-structure.png')" aspect-ratio="1.8" contain style="border: 1px solid #6b6f75"></v-img>
+      </div>
     </v-flex>
   </v-layout>
 
