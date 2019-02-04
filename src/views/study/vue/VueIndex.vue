@@ -35,7 +35,7 @@
     data() {
       return {
         vueItems: [
-          {title: 'Vue 컨텐츠', subtitle: 'Vue v-model', createDate: '2019-01-24', path: '/contents/vue-1'}
+          {title: 'Vue 소개', subtitle: 'Vue JS에 대한 간략한 소개', createDate: '2019-02-04', path: '/contents/vue-1'}
         ]
       }
     },
