@@ -40,6 +40,11 @@ export default new Router({
       path: '/contents/vue-1',
       name: 'content-vue-1',
       component: () => import('./views/contents/vue/vue1.vue')
+    },
+    {
+      path: '/contents/vue-2',
+      name: 'content-vue-2',
+      component: () => import('./views/contents/vue/vue2.vue')
     }
   ]
 })

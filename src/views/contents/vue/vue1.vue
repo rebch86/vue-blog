@@ -18,7 +18,12 @@
       </div>
       <v-divider class="mt-5 mb-5"/>
       <div>
-        <p>그림 2 - Vue Component</p>
+        <p>그림 2 - MVVM 패턴</p>
+        <v-img :src="require('@/assets/vue/mvvm2.png')" aspect-ratio="1.8" contain style="border: 1px solid #6b6f75"></v-img>
+      </div>
+      <v-divider class="mt-5 mb-5"/>
+      <div>
+        <p>그림 3 - Vue Component</p>
         <v-img :src="require('@/assets/vue/vue-component-structure.png')" aspect-ratio="1.8" contain style="border: 1px solid #6b6f75"></v-img>
       </div>
     </v-flex>
@@ -39,7 +44,7 @@
         '- Vue JS 는 React / Angular 와 같이 가상DOM(Virtual DOM)을 사용한다.\n' +
         '## Vue 특징\n' +
         '- 가상DOM 사용\n' +
-        '- MVVM패턴 사용(그림1 참조)\n' +
+        '- MVVM패턴 사용(그림1, 2 참조)\n' +
         '- 템플릿 : HTML 템플릿을 그대로 활용(별도로 학습할 이유가 없음)\n' +
         '- 컴포넌트 기반 개발 : 웹 애플리케이션의 구성요소(HTML, CSS, JS)를 컴포넌트로 관리 + 컴포넌트로 관리하기 때문에, 재사용성 및 확장성에 유리함\n' +
         '## 기타\n' +
