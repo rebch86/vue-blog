@@ -4,7 +4,7 @@
 
       <v-card>
         <v-list three-line>
-          <template v-for="(item, index) in vueItems.reverse()">
+          <template v-for="(item, index) in vueItems">
             <v-list-tile :key="index" avatar ripple @click="viewContent(item.path)">
               <v-list-tile-content>
                 <v-list-tile-title>{{ item.title }}</v-list-tile-title>
