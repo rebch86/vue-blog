@@ -12,7 +12,7 @@
               </v-list-tile-content>
 
               <v-list-tile-action>
-                <v-list-tile-action-text>{{ item.createDate }}</v-list-tile-action-text>
+                <v-list-tile-action-text style="color: #323335">{{ item.createDate }}</v-list-tile-action-text>
               </v-list-tile-action>
 
             </v-list-tile>
@@ -35,8 +35,8 @@
     data() {
       return {
         vueItems: [
-          {title: '1. Vue 소개', subtitle: 'Vue JS에 대한 간략한 소개', createDate: '2019-02-04', path: '/contents/vue-1'},
-          {title: '2. Vue 시작하기', subtitle: 'Vue JS 설치 및 시작', createDate: '2019-02-07', path: '/contents/vue-2'}
+          {title: '2. Vue 시작하기', subtitle: 'Vue JS 설치 및 시작', createDate: '2019-02-07', path: '/contents/vue-2'},
+          {title: '1. Vue 소개', subtitle: 'Vue JS에 대한 간략한 소개', createDate: '2019-02-04', path: '/contents/vue-1'}
         ]
       }
     },
